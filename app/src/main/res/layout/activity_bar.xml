@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bar">
+
+    <Button
+        android:id="@+id/toast"
+        android:layout_width="124dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="139dp"
+        android:text="Toast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stack"
+        android:layout_width="133dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="72dp"
+        android:text="Stack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toast" />
+
+    <Button
+        android:id="@+id/alert"
+        android:layout_width="123dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="60dp"
+        android:text="Alert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stack" />
+</androidx.constraintlayout.widget.ConstraintLayout>

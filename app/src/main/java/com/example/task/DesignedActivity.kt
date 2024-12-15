@@ -33,7 +33,7 @@ class DesignedActivity : AppCompatActivity() {
         titleList.add("bee")
 
         descList.add("A for apple")
-        descList.add("K FOR King")
+        descList.add("K for King")
         descList.add("B for bee")
 
         adapter = Adapterr(

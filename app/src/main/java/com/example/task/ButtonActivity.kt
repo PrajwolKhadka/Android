@@ -17,9 +17,22 @@ class ButtonActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnNavigate.setOnClickListener{
-            val intent= Intent(this@ButtonActivity, DesignedActivity::class.java)
-            startActivity(intent)
-            finish()
+
+            val username: String = binding.editUser.text.toString()
+            val pass: String= binding.editPass.text.toString()
+            if(username.isEmpty()){
+                binding.editUser.error="Username can't be empty"
+            }
+            else if(pass.isEmpty()){
+                binding.editPass.error="Password can't be empty"
+            }
+            else{
+                val intent= Intent(this@ButtonActivity, DestinationActivity::class.java)
+                intent.putExtra("username",username)
+                intent.putExtra("password",pass)
+                startActivity(intent)
+            }
+
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
